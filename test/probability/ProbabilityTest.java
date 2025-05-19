@@ -26,4 +26,11 @@ class ProbabilityTest {
         Probability probability2 = Probability.createProbability(0.5);
         assertEquals(Probability.createProbability(0.25), probability2.and(probability1));
     }
+//P(A || B) = P(A) + P(B) - P(A) * P(B)
+    @Test
+    void probabilityOfGettingAtLeastOneTails() {
+        Probability probability1 = Probability.createProbability(0.5);
+        Probability probability2 = Probability.createProbability(0.5);
+        assertEquals(Probability.createProbability(0.75),probability1.or(probability2));
+    }
 }
