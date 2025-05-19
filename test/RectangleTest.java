@@ -18,4 +18,20 @@ class RectangleTest {
         Rectangle rectangle = new Rectangle(height, width);
         assertEquals(0,rectangle.area());
     }
+
+    @Test
+    void perfectPerimeter() {
+        int height = 10;
+        int width = 20;
+        Rectangle rectangle = new Rectangle(height, width);
+        assertEquals(60,rectangle.perimeter());
+    }
+
+    @Test
+    void perimeterIfBothDimensionsAreZero() {
+        int height = 0;
+        int width = 0;
+        Rectangle rectangle = new Rectangle(height, width);
+        assertEquals(0,rectangle.perimeter());
+    }
 }
