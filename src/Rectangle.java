@@ -1,4 +1,4 @@
-public class Rectangle {
+public class Rectangle implements ClosedShape {
 
     private final int height;
     private final int width;
@@ -8,10 +8,12 @@ public class Rectangle {
         this.width = width;
     }
 
+    @Override
     public int area() {
         return this.width * this.height;
     }
 
+    @Override
     public int perimeter() {
         return 2 * (this.height+this.width);
     }
