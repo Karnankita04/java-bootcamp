@@ -1,4 +1,6 @@
-public  class Square implements ClosedShape{
+package Shapes;
+
+public  class Square implements ClosedShape {
 
     private final int side;
 

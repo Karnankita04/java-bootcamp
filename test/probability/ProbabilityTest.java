@@ -17,7 +17,7 @@ class ProbabilityTest {
     @Test
     void shouldNotAllowInvalidProbability() {
         RuntimeException exception = assertThrows(RuntimeException.class, () -> Probability.createProbability(12.2));
-        assertEquals(exception.getMessage(), "Invalid probability");
+        assertEquals("Invalid probability", exception.getMessage());
     }
 
     @Test
@@ -27,6 +27,7 @@ class ProbabilityTest {
         assertEquals(Probability.createProbability(0.25), probability2.and(probability1));
     }
 //P(A || B) = P(A) + P(B) - P(A) * P(B)
+
     @Test
     void probabilityOfGettingAtLeastOneTails() {
         Probability probability1 = Probability.createProbability(0.5);

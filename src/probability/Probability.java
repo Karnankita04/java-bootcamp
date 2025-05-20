@@ -35,19 +35,21 @@ public class Probability {
     }
 
     @Override
+    public String toString() {
+        return "Probability{" +
+                "probability=" + probability +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hashCode(probability);
     }
 
-    @Override
-    public String toString() {
-        return "Probability{" +
-                "v=" + probability +
-                '}';
-    }
 
     public Probability or(Probability other) {
         return new Probability(probability + other.probability - this.and(other).probability);
+        //!(!p(a) && !p(b)
     }
 
 }

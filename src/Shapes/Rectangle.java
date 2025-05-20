@@ -1,3 +1,5 @@
+package Shapes;
+
 public class Rectangle implements ClosedShape {
 
     private final int height;
