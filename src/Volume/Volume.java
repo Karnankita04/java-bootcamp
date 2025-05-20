@@ -1,18 +1,18 @@
-package LiquidMeasurements;
+package Volume;
 
 import java.util.Objects;
 
-public class Liters {
+public class Volume {
     private final double liters;
 
-    public Liters(double liters) {
+    public Volume(double liters) {
         this.liters = liters;
     }
 
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Liters liters1 = (Liters) o;
+        Volume liters1 = (Volume) o;
         return Double.compare(liters, liters1.liters) == 0;
     }
 

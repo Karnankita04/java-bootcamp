@@ -1,4 +1,4 @@
-package LiquidMeasurements;
+package Volume;
 
 public class Gallon {
     private final int gallon;
@@ -7,7 +7,7 @@ public class Gallon {
         this.gallon = gallon;
     }
 
-    public Liters toLiters() {
-        return new Liters(this.gallon * 3.78);
+    public Volume toLiters() {
+        return new Volume(this.gallon * 3.78);
     }
 }

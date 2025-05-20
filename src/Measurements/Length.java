@@ -3,30 +3,28 @@ package Measurements;
 import java.util.Objects;
 
 public class Length {
-
-
     private final double inch;
 
     public Length(double inch) {
         this.inch = inch;
     }
 
-
-    private static double toInch(double value, int multiplicationFactor, double divisionFactor) {
-        return (value * multiplicationFactor) / divisionFactor;
+    private static Length toInch(double value, int multiplicationFactor, double divisionFactor) {
+        return new Length((value * multiplicationFactor) / divisionFactor);
     }
 
-    public static Length fromCmToInch(int cm) {
-        return new Length(toInch(cm, 1, 2.5));
-    }
+    public static Length convertToInch(double value, Units unit) {
+        switch (unit) {
+            case CM:
+                return toInch(value, 1, 2.5);
+            case MM:
+                return toInch(value, 1, 25);
+            case FEET:
+                return toInch(value, 12, 1.0);
+            default:
+                return new Length(value);
+        }
 
-    public static Length fromMMToInch(int mm) {
-        return new Length(toInch(mm, 1, 25));
-    }
-
-
-    public static Length fromFeetToInch(double feet) {
-        return new Length(toInch(feet,12, 1.0));
     }
 
 

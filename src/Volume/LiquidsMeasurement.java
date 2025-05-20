@@ -1,10 +1,10 @@
-package LiquidMeasurements;
+package Volume;
 
 public class LiquidsMeasurement {
     private final Gallon gallon;
-    private final Liters liters;
+    private final Volume liters;
 
-    public LiquidsMeasurement(Gallon gallon, Liters liters) {
+    public LiquidsMeasurement(Gallon gallon, Volume liters) {
         this.gallon = gallon;
         this.liters = liters;
     }
